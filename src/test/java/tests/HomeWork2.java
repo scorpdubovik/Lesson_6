@@ -91,6 +91,6 @@ public class HomeWork2 {
         Assert.assertEquals(actualRemains,expectedRemains,"Отстатки различные");
         Assert.assertEquals(actualSegments,expectedSegments,"Количество отрезков различное");
 
-        driver.quit();
+        //  driver.quit();
     }
 }
