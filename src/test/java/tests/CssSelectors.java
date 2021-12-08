@@ -29,6 +29,15 @@ public class CssSelectors {
 
         By valueEndsWithSelector = By.cssSelector("a[href$='@gmail.com']"); //Поиск с элемента с аттрибутом значение которого аканчивается на
 
+        By childRightAfterParentSelector = By.cssSelector("ul>li"); //Поиск дочернего li у которого родитель ul
+
+        By elementRightAfterElementSelector = By.cssSelector("form+script"); //Поиск элемента script который идет сразу после элемента #form
+        By elementOnTheSameLevelSelector = By.cssSelector("form~script"); //Поиск элемента script которым предшествует элемент #form
+
+        By firstChildSelector = By.cssSelector("li:first-child"); //Поиск 1го дочернего элемента
+        By lastChildSelector = By.cssSelector("li:last-child"); //Поиск последнего дочернего элемента
+        By nthChildFromBeginSelector = By.cssSelector("li:nth-child(2)"); //Поиск n-го дочернего элемента с начала
+        By nthChildFromEndSelector = By.cssSelector("li:nth-last-child(3)"); //Поиск n-го дочернего элемента с конца
 
     }
 }
