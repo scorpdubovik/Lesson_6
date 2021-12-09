@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class HomeWork2 {
-    static String URL = "https://masterskayapola.ru/kalkulyator/laminata.html";
+    static String URL = "https://masterskayapString lamWidthValue =ola.ru/kalkulyator/laminata.html";
 
     @Test
     public void homework_test2(){
@@ -91,6 +91,6 @@ public class HomeWork2 {
         Assert.assertEquals(actualRemains,expectedRemains,"Отстатки различные");
         Assert.assertEquals(actualSegments,expectedSegments,"Количество отрезков различное");
 
-        //  driver.quit();
+          driver.quit();
     }
 }
