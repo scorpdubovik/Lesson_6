@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class HomeWork2 {
-    static String URL = "https://masterskayapString lamWidthValue =ola.ru/kalkulyator/laminata.html";
+    static String URL = "https://masterskayapola.ru/kalkulyator/laminata.html";
 
     @Test
     public void homework_test2(){
@@ -37,46 +37,57 @@ public class HomeWork2 {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
+        // 1.Открыть браузер и перейти на тестируемую страницу
         driver.get(URL);
 
+        // 2.Ввести длину помещения
         WebElement roomLength = driver.findElement(By.name("calc_roomwidth"));
         roomLength.sendKeys(Keys.DELETE, roomLengthValue);
 
+        // 3.Ввести ширину помещения
         WebElement roomWidth = driver.findElement(By.name("calc_roomheight"));
         roomWidth.sendKeys(Keys.chord(Keys.DELETE, roomWidthValue));
 
+        // 4.Ввести длину ламината
         WebElement lamLength = driver.findElement(By.name("calc_lamwidth"));
         lamLength.sendKeys(Keys.LEFT_CONTROL+"a",Keys.DELETE);
         lamLength.sendKeys(lamLengthValue);
 
+        // 5.Ввести ширину ламината
         WebElement lamWidth = driver.findElement(By.name("calc_lamheight"));
         lamWidth.sendKeys(Keys.LEFT_CONTROL+"a",Keys.DELETE);
         lamWidth.sendKeys(lamWidthValue);
 
+        // 6.Ввести количество ламината в упаковке
         WebElement lamInPack = driver.findElement(By.name("calc_inpack"));
         lamInPack.sendKeys(Keys.LEFT_CONTROL+"a",Keys.DELETE);
         lamInPack.sendKeys(lamInPackValue);
 
+        // 7.Ввести цену за ламинат
         WebElement lamPrice = driver.findElement(By.name("calc_price"));
         lamPrice.sendKeys(Keys.LEFT_CONTROL+"a",Keys.DELETE);
         lamPrice.sendKeys(lamPriceValue);
 
+        // 8.Выбрать направление укладки
         WebElement directionElement = driver.findElement(By.name("calc_direct"));
         Select directionDropDown = new Select(directionElement);
         directionDropDown.selectByValue("toh");
 
+        // 9.Ввести величину смещения рядов
         WebElement dislocation = driver.findElement(By.name("calc_bias"));
         dislocation.clear();
         dislocation.sendKeys(dislocationValue);
 
+        // 10.Ввести отступ от стены
         WebElement walldist = driver.findElement(By.name("calc_walldist"));
         walldist.sendKeys(Keys.LEFT_CONTROL+"a", Keys.DELETE);
         walldist.sendKeys(walldistValue);
 
+        // 11.Нажать на кнопку 'Рассчитать'
         WebElement calculate = driver.findElement(By.cssSelector("input[onclick='lamcalc();']"));
         calculate.click();
 
-        // Проверить результаты
+        // 12.Проверить результаты
         String actualSquare = driver.findElement(By.id("s_lam")).getText();
         String actualNumberOfPanels = driver.findElement(By.id("l_count")).getText();
         String actualNumberOfPackages = driver.findElement(By.id("l_packs")).getText();
