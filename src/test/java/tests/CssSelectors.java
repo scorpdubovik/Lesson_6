@@ -23,7 +23,7 @@ public class CssSelectors {
         By fullHierarchicalSelector = By.cssSelector("body .table .content-inner"); //Использование 3х уровневой иерархии для поиска дочернего элемента
 
         By searchLikeContainsSelector = By.cssSelector("form[action*='admin']"); //Поиск с вхождением подстроки в значении аттрибута
-        By searchByWordSelector = By.cssSelector("form[action~='admin']"); //Поиск с вхождением слова в значении аттрибута
+        By searchByWordSelector = By.cssSelector("div[class~='column']"); //Поиск с вхождением слова в значении аттрибута
 
         By valueStartsFromSelector = By.cssSelector("a[href^='https://']"); //Поиск с элемента с аттрибутом значение которого начинается с
 
