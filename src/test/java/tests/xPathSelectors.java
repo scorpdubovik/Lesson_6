@@ -22,8 +22,8 @@ public class xPathSelectors {
     private static String searchBySubstringPath = "//*[contains(text(),'Widget')]";   // Поиск элемента по подстроке в тексте
 
     private static String searchByStartsWithPath = "//input[starts-with(@type, 'hi')]";//Поиск элемента по аттрибуту значение которого начинается с
-
     private static String searchByTwoAttrPath = "//*[@class='form-control ' and @type='text']";   // Использование логического оператора
+
 
     private static String searchBySpecificAttrPath = "//input[@type != 'hidden']";   // Использование логического оператора
 
