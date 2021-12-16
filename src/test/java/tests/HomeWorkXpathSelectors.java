@@ -26,8 +26,6 @@ public class HomeWorkXpathSelectors {
 
 
 
-//*[text()='Рекомендации к монтажу']
-//*[contains(text(), 'монтажу')]
 
 
 
