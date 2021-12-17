@@ -44,7 +44,14 @@ public class HomeWorkXpathSelectors {
 
     //Использование following - Выбирает всё в документе после закрытия тэга текущего узла
     private static String path4_1 = "//div[@id='large_img']/following::strong";
-    private static String path4_2 = "//div[@id='large_img']/following::div/*[@style=\"margin-left:5px;\"])[2]";
+    private static String path4_2 = "(//div[@id='large_img']/following::div/*[@style='margin-left:5px;'])[2]";
 
+    //Использование following-sibling - Выбирает все узлы одного уровня после текущего узла
+    private static String path5_1 = "//div[@id='large_img']/following-sibling::p";
 
+    //Использование preceding- Выбирает все узлы, которые появляются перед текущим узлом в документе
+    private static String path6_1 = "//div[@id='large_img']/preceding::script";
+
+    //Использование preceding-sibling - Выбирает все узлы одного уровня до текущего узла
+    private static String path7_1 = "//div[@id=\"share_more___uptlk6982\"]/preceding-sibling::iframe";
 }
