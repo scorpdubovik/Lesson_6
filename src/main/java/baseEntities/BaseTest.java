@@ -19,7 +19,7 @@ protected WebDriver driver;
 
     @BeforeMethod
     public void setUp(){
-        switch (ReadProperties.getbrowserType().toLowerCase(Locale.ROOT)) {
+        switch (ReadProperties.getbrowserType().toLowerCase()) {
             case "chrome" :
                 WebDriverManager.getInstance(DriverManagerType.CHROME).setup();
 

@@ -20,5 +20,9 @@ public class ReadProperties {
     public static boolean getHeadless() { return properties.getProperty("headless").equalsIgnoreCase("true");}
     public static String getUsername() { return properties.getProperty("username");}
     public static String getPassword() { return properties.getProperty("password");}
+    public static String getProjectName() { return properties.getProperty("projectName");}
+    public static String getNewProjectName() { return properties.getProperty("newProjectName");}
+    public static String getAnnouncement() { return properties.getProperty("announcement");}
+
 
 }
