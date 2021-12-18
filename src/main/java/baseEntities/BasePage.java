@@ -10,6 +10,7 @@ public class BasePage {
     public BasePage(WebDriver driver){
         this.driver= driver;
     }
+
     public boolean isPageOpen(By by){
         try{
             return driver.findElement(by).isDisplayed();

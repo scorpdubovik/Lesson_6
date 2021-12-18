@@ -36,9 +36,12 @@ protected WebDriver driver;
                 WebDriverManager.getInstance(DriverManagerType.FIREFOX).setup();
                 driver = new FirefoxDriver();
                 break;
-               // System.out.println("This type of browser is not supported");
-               // break;
+
+            default:
+                System.out.println("This type of browser is not supported");
+                break;
         }
+
         driver.manage().window().maximize();
         driver.get(ReadProperties.getUrl());
     }
