@@ -20,7 +20,7 @@ public class LoginPage extends BasePage {
 }
 
     public boolean isPageOpened(){
-        return super.isPageOpen(PAGE_OPENED_IDENTIFIER);
+        return super.isPageOpened(PAGE_OPENED_IDENTIFIER);
 }
 
     // Реализация гетерров элементов

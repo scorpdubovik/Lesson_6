@@ -5,10 +5,14 @@ import com.tms.core.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 public class AddProjectPage extends BasePage {
     // Описание элементов страницы
-    private By PAGE_OPENED_IDENTIFIER = By.id("sidebar-projects-add");
+    private By PAGE_OPENED_IDENTIFIER1 = By.id("sidebar-projects-add");
+    private By PAGE_OPENED_IDENTIFIER2 = By.cssSelector(".message.message-success");
+    String expectedPageOpenIdentifier = "Successfully added the new project.";
+
 
     private By addProject_Selector = By.id("sidebar-projects-add");
     private By name_Selector = By.id("name");
@@ -20,8 +24,7 @@ public class AddProjectPage extends BasePage {
     public AddProjectPage(WebDriver driver){super(driver);}
 
     public boolean isPageOpened(){
-        return super.isPageOpen(PAGE_OPENED_IDENTIFIER);
-    }
+        return super.isPageOpened(PAGE_OPENED_IDENTIFIER1);}
 
      // Реализация гетерров элементов
     public WebElement getAddProject(){
@@ -39,6 +42,9 @@ public class AddProjectPage extends BasePage {
     public WebElement getCreateProject(){
         return driver.findElement(createProject_Selector);
     }
+    public WebElement getPageOpenIdentifier(){
+        return driver.findElement(PAGE_OPENED_IDENTIFIER2);
+    }
     // Реализация базовых методов
     public void addProject(){
         getAddProject().click();
@@ -49,5 +55,7 @@ public class AddProjectPage extends BasePage {
           getRadioButton().click();
           getCreateProject().click();
 
+          String actualPageOpenIdentifier = getPageOpenIdentifier().getText();
+          Assert.assertEquals(actualPageOpenIdentifier ,expectedPageOpenIdentifier, "Проект не был создан");
       }
 }
