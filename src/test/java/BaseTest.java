@@ -1,37 +1,40 @@
 import org.testng.annotations.*;
 
+
+@Listeners(Listener.class)
 public class BaseTest {
 
+    //Before Annotations
     @BeforeTest
-    public void beforeTest(){System.out.printf("BeforeTest");}
+    public void beforeTest(){System.out.println("BeforeTest");}
 
     @BeforeSuite
-    public void beforeSuite(){System.out.printf("BeforeSuite");}
+    public void beforeSuite(){System.out.println("BeforeSuite");}
 
     @BeforeGroups
-    public void beforeGroups(){System.out.printf("BeforeGroups");}
+    public void beforeGroups(){System.out.println("BeforeGroups");}
 
     @BeforeClass
-    public void beforeClass(){System.out.printf("BeforeClass");}
+    public void beforeClass(){System.out.println("BeforeClass");}
 
     @BeforeMethod
-    public void beforeMethod(){System.out.printf("BeforeMethod");}
+    public void beforeMethod(){System.out.println("BeforeMethod");}
 
     //After Annotations
     @AfterTest
-    public void beforeTest1(){System.out.printf("BeforeTest");}
+    public void afterTest(){System.out.println("AfterTest");}
 
     @AfterSuite
-    public void beforeSuite1(){System.out.printf("BeforeSuite");}
+    public void afterSuite(){System.out.println("AfterSuite");}
 
     @AfterGroups
-    public void beforeGroups1(){System.out.printf("BeforeGroups");}
+    public void afterGroups(){System.out.println("AfterGroups");}
 
     @AfterClass
-    public void beforeClass1(){System.out.printf("BeforeClass");}
+    public void afterClass(){System.out.println("AfterClass");}
 
     @AfterMethod
-    public void beforeMethod1(){System.out.printf("BeforeMethod");}
+    public void afterMethod(){System.out.println("AfterMethod");}
 
 
 }
