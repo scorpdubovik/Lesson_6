@@ -5,12 +5,13 @@ import org.testng.annotations.DataProvider;
 public class StaticProvider {
 
     @DataProvider(name = "dataForSum")
-    public static Object[][] dataForSumFunction(){
+    public static Object[][] dataForSumFunction() {
         return new Object[][]{
-                {-2,-3,-5},
-                {0,0,0},
-                {2,3,5}
+                {-2, -3, -5},
+                {0, 0, 0},
+                {2, 3, 5}
         };
     }
-
 }
+
+
