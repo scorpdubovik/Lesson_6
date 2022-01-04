@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
 protected WebDriver driver;
@@ -43,6 +44,8 @@ protected WebDriver driver;
         }
 
         driver.manage().window().maximize();
+
+        driver.manage().timeouts().implicitlyWait(0, TimeUnit.MILLISECONDS);
         driver.get(ReadProperties.getUrl());
     }
 

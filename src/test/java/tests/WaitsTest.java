@@ -18,7 +18,6 @@ public class WaitsTest extends BaseTest {
         WebElement figure = driver.findElement(By.className("figure"));
         figure.click();
 
-        WebElement caption = driver.findElement(By.xpath("//h5[. = 'name: user1']"));
-        Assert.assertEquals(caption.isDisplayed());
+        Assert.assertTrue(waits.waitForVisibility(By.xpath("//h5[. = 'name: user1']")).isDisplayed());
     }
 }
