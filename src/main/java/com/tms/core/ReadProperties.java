@@ -21,4 +21,7 @@ public class ReadProperties {
     public static String getUsername() { return properties.getProperty("username");}
     public static String getPassword() { return properties.getProperty("password");}
 
+    public static String getUrl2() { return properties.getProperty("url2");}
+    public static String getNumber() { return properties.getProperty("number");}
+
 }
