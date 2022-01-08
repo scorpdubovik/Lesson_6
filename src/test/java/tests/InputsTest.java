@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.InputsPage;
 
 public class InputsTest extends BaseTest {
+
     @Test
     public void inputNumbersTest(){
         InputsPage inputsPage = new InputsPage(driver);

@@ -23,5 +23,5 @@ public class ReadProperties {
 
     public static String getUrl2() { return properties.getProperty("url2");}
     public static String getNumber() { return properties.getProperty("number");}
-
+    public static int getTimeOut() {return Integer.parseInt(properties.getProperty("timeout"));}
 }
