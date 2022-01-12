@@ -2,6 +2,7 @@ package tests;
 
 import baseEntities.BaseTest;
 import com.tms.core.ReadProperties;
+import models.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
@@ -12,19 +13,18 @@ public class SmokeTest extends BaseTest {
 
     @Test
     public void loginTest() {
-        LoginPage loginPage = new LoginPage(driver);
+        User user = new User()
+                .setEmail(ReadProperties.getUsername())
+                .setPassword(ReadProperties.getPassword());
 
-        loginPage.getEmailField().sendKeys(ReadProperties.getUsername());
-        loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
-        loginPage.getLoginButton().click();
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(user);
 
         DashboardPage dashboardPage = new DashboardPage(driver);
-        waits.waitForVisibility(dashboardPage.getAddProjectButton());
-
-        Assert.assertTrue(dashboardPage.isPageOpened());
+        Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
 
-    @Test(retryAnalyzer = Retry.class)
+    @Test (retryAnalyzer = Retry.class)
     public void flakyLoginTest() {
         LoginPage loginPage = new LoginPage(driver);
 
@@ -33,8 +33,9 @@ public class SmokeTest extends BaseTest {
         loginPage.getLoginButton().click();
 
         DashboardPage dashboardPage = new DashboardPage(driver);
-        waits.waitForVisibility(dashboardPage.getAddProjectButton());
+        driver.get("https://qa1504.testrail.io/index.php?/admin/overview");
 
-        Assert.assertTrue(dashboardPage.isPageOpened());
+        dashboardPage = new DashboardPage(driver, true);
+        Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
 }
