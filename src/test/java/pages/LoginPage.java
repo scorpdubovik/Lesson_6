@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
     // Описание элементов страницы
+    private static String ENDPOINT = "/auth/login";
+
     private By PAGE_OPENED_IDENTIFIER = By.className("logo-loginpage");
 
     private By email_Selector = By.id("name");
@@ -19,8 +21,13 @@ public class LoginPage extends BasePage {
     super(driver);
 }
 
+    @Override
+    protected void openPage() {
+        driver.get(BASE_URL + ENDPOINT);
+    }
+
     public boolean isPageOpened(){
-        return super.isPageOpen(PAGE_OPENED_IDENTIFIER);
+        return super.isPageOpened(PAGE_OPENED_IDENTIFIER);
 }
 
     // Реализация гетерров элементов

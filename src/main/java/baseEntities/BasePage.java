@@ -1,22 +1,38 @@
 package baseEntities;
 
+import com.tms.core.ReadProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import utils.Waits;
 
-public class BasePage {
+public abstract class BasePage {
     protected WebDriver driver;
+    protected Waits waits;
+    protected String BASE_URL;
 
-    public BasePage(WebDriver driver){
-        this.driver= driver;
+    public BasePage(WebDriver driver) {
+        this(driver, false);
     }
 
-    public boolean isPageOpen(By by){
-        try{
-            return driver.findElement(by).isDisplayed();
-        }catch (NoSuchElementException nsex){
+    public BasePage(WebDriver driver, boolean openPageByUrl) {
+        this.driver = driver;
+        this.waits = new Waits(driver);
+        this.BASE_URL = ReadProperties.getUrl();
+
+        if (openPageByUrl) {
+            openPage();
+        }
+    }
+
+    protected abstract void openPage();
+
+    public boolean isPageOpened(By by) {
+        try {
+            return waits.waitForVisibility(by).isDisplayed();
+        } catch (Exception exception) {
+            exception.printStackTrace();
             return false;
         }
-
     }
 }
