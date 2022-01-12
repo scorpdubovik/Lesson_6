@@ -1,0 +1,16 @@
+Index: src/test/java/pages/AddProjectPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package pages;\r\n\r\nimport baseEntities.BasePage;\r\nimport com.tms.core.ReadProperties;\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.WebElement;\r\nimport org.testng.Assert;\r\n\r\npublic class AddProjectPage extends BasePage {\r\n    // Описание элементов страницы\r\n    private By PAGE_OPENED_IDENTIFIER1 = By.id(\"sidebar-projects-add\");\r\n    private By PAGE_OPENED_IDENTIFIER2 = By.cssSelector(\".message.message-success\");\r\n    String expectedPageOpenIdentifier = \"Successfully added the new project.\";\r\n\r\n\r\n    private By addProject_Selector = By.id(\"sidebar-projects-add\");\r\n    private By name_Selector = By.id(\"name\");\r\n    private By announcement_Selector = By.id(\"announcement\");\r\n    private By radioButton_Selector = By.id(\"suite_mode_single_baseline\");\r\n    private By createProject_Selector = By.id(\"accept\");\r\n\r\n    // Конструктор страницы\r\n    public AddProjectPage(WebDriver driver){super(driver);}\r\n\r\n    public boolean isPageOpened(){\r\n        return super.isPageOpened(PAGE_OPENED_IDENTIFIER1);}\r\n\r\n     // Реализация гетерров элементов\r\n    public WebElement getAddProject(){\r\n        return driver.findElement(addProject_Selector);\r\n    }\r\n    public WebElement getNameField(){\r\n        return driver.findElement(name_Selector);\r\n    }\r\n    public WebElement getAnnouncementField(){\r\n        return driver.findElement(announcement_Selector);\r\n    }\r\n    public WebElement getRadioButton(){\r\n        return driver.findElement(radioButton_Selector);\r\n    }\r\n    public WebElement getCreateProject(){\r\n        return driver.findElement(createProject_Selector);\r\n    }\r\n    public WebElement getPageOpenIdentifier(){\r\n        return driver.findElement(PAGE_OPENED_IDENTIFIER2);\r\n    }\r\n    // Реализация базовых методов\r\n    public void addProject(){\r\n        getAddProject().click();\r\n    }\r\n      public void createProject(String newProjectName, String announcement){\r\n          getNameField().sendKeys(ReadProperties.getNewProjectName());\r\n          getAnnouncementField().sendKeys(ReadProperties.getAnnouncement());\r\n          getRadioButton().click();\r\n          getCreateProject().click();\r\n\r\n          String actualPageOpenIdentifier = getPageOpenIdentifier().getText();\r\n          Assert.assertEquals(actualPageOpenIdentifier ,expectedPageOpenIdentifier, \"Проект не был создан\");\r\n      }\r\n}\r\n
+===================================================================
+diff --git a/src/test/java/pages/AddProjectPage.java b/src/test/java/pages/AddProjectPage.java
+--- a/src/test/java/pages/AddProjectPage.java	
++++ b/src/test/java/pages/AddProjectPage.java	
+@@ -49,6 +49,7 @@
+     public void addProject(){
+         getAddProject().click();
+     }
++
+       public void createProject(String newProjectName, String announcement){
+           getNameField().sendKeys(ReadProperties.getNewProjectName());
+           getAnnouncementField().sendKeys(ReadProperties.getAnnouncement());
