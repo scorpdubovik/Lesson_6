@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6723c9f6-a69a-4188-a0df-2a96be2dee3f" name="Changes" comment="ValueOfObjects in work">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_2021_19_28__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_12_2021_19_28__Changes_.xml" afterDir="false" />
+    <list default="true" id="6723c9f6-a69a-4188-a0df-2a96be2dee3f" name="Changes" comment="AdvancedActions classwork">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lesson6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Lesson6.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/FrameTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FrameTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/SmokeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/SmokeTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SmokeTest.loginTest">
+  <component name="RunManager" selected="TestNG.JSTests.jsTest">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActionTests.actionTest1" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ActionTests.actionTest2" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
@@ -112,7 +112,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.ActionTests" />
-      <option name="METHOD_NAME" value="actionTest1" />
+      <option name="METHOD_NAME" value="actionTest2" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -120,7 +120,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FrameTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +129,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FrameTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.FileUploadTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileUploadTest.fileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Lesson6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.FileUploadTest" />
+      <option name="METHOD_NAME" value="fileUploadTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -155,7 +173,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="JSTests.jsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
@@ -165,24 +183,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tests" />
       <option name="MAIN_CLASS_NAME" value="tests.JSTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SmokeTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Lesson6" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.SmokeTest" />
-      <option name="METHOD_NAME" value="loginTest" />
+      <option name="METHOD_NAME" value="jsTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -212,19 +213,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.Unnamed" />
-      <item itemvalue="TestNG.FrameTests" />
+      <item itemvalue="TestNG.ActionTests.actionTest2" />
+      <item itemvalue="TestNG.FileUploadTest.fileUploadTest" />
+      <item itemvalue="TestNG.FileUploadTest" />
       <item itemvalue="TestNG.FrameTests.frameTest" />
-      <item itemvalue="TestNG.JSTests" />
-      <item itemvalue="TestNG.ActionTests.actionTest1" />
-      <item itemvalue="TestNG.SmokeTest.loginTest" />
+      <item itemvalue="TestNG.JSTests.jsTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SmokeTest.loginTest" />
-        <item itemvalue="TestNG.ActionTests.actionTest1" />
-        <item itemvalue="TestNG.JSTests" />
+        <item itemvalue="TestNG.JSTests.jsTest" />
         <item itemvalue="TestNG.FrameTests.frameTest" />
-        <item itemvalue="TestNG.FrameTests" />
+        <item itemvalue="TestNG.FileUploadTest" />
+        <item itemvalue="TestNG.FileUploadTest.fileUploadTest" />
+        <item itemvalue="TestNG.ActionTests.actionTest2" />
       </list>
     </recent_temporary>
   </component>
@@ -566,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641841904315</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="AdvancedActions classwork">
+      <created>1642095221643</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1642095221643</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -581,7 +589,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="В работе" />
     <MESSAGE value="Третья задача в работе" />
     <MESSAGE value="Домашку сделал" />
     <MESSAGE value="Домашку сделал 3 задачи" />
@@ -606,7 +613,8 @@
     <MESSAGE value="1" />
     <MESSAGE value="CristmasHW сделал!" />
     <MESSAGE value="work" />
-    <option name="LAST_COMMIT_MESSAGE" value="work" />
+    <MESSAGE value="AdvancedActions classwork" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdvancedActions classwork" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Lesson6$SmokeTest_openProjectTest.ic" NAME="SmokeTest.openProjectTest Coverage Results" MODIFIED="1639854693150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -16,8 +16,8 @@ public class FrameTests extends BaseTest {
         driver.switchTo().frame("mce_0_ifr");
         Assert.assertTrue(driver.findElement(By.id("tinymce")).isDisplayed());
 
-        //driver.switchTo().parentFrame();
-        driver.switchTo().defaultContent();
+        //driver.switchTo().parentFrame(); // На один уровень выше
+        driver.switchTo().defaultContent(); // Возврат на главную страницу
         Assert.assertTrue(driver.findElement(By.className("tox-editor-container")).isDisplayed());
     }
 }
