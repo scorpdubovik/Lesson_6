@@ -15,14 +15,27 @@ public final class Waits {
         this.driver = driver;
         wait = new WebDriverWait(driver, ReadProperties.getTimeOut());
     }
+
     public Waits(WebDriver driver, int timeOut) {
         this.driver = driver;
         wait = new WebDriverWait(driver, timeOut);
     }
-    public boolean waitForVisibility(WebElement element){
+
+    public boolean waitForVisibility(WebElement element) {
         return wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed();
-        }
-    public WebElement waitForVisibility(By by){
+    }
+
+    public WebElement waitForVisibility(By by) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
+
+    public void waitForInvisibility(By by, int time) {
+        WebDriverWait wait = new WebDriverWait(driver, time);
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(by));
     }
+
+    public boolean waitForInvisibility(WebElement webElement, int time) {
+        WebDriverWait wait = new WebDriverWait(driver, time);
+        return wait.until(ExpectedConditions.invisibilityOf(webElement));
+    }
+}

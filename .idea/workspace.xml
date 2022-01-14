@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6723c9f6-a69a-4188-a0df-2a96be2dee3f" name="Changes" comment="AdvancedActions classwork">
+      <change afterPath="$PROJECT_DIR$/src/test/java/HomeWork/DynamicLoadingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HomeWork/FloatingMenuTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/HomeWork/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/FrameTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/FrameTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/tests/SmokeTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/tests/SmokeTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tms/core/ReadProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tms/core/ReadProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/Waits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/Waits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/utils/Waits.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/utils/Waits.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="AdvancedActions" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,7 +70,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TAF2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WaitsExample" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -90,7 +96,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.JSTests.jsTest">
+  <component name="RunManager" selected="TestNG.LoginTest">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,17 +108,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ActionTests.actionTest2" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DynamicLoadingTest.waitsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="HomeWork.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.ActionTests" />
-      <option name="METHOD_NAME" value="actionTest2" />
+      <option name="PACKAGE_NAME" value="HomeWork" />
+      <option name="MAIN_CLASS_NAME" value="HomeWork.DynamicLoadingTest" />
+      <option name="METHOD_NAME" value="waitsTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -120,16 +126,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FloatingMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="HomeWork.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FileUploadTest" />
+      <option name="PACKAGE_NAME" value="HomeWork" />
+      <option name="MAIN_CLASS_NAME" value="HomeWork.FloatingMenuTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -137,17 +143,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileUploadTest.fileUploadTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FloatingMenuTest.floatingJSTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="HomeWork.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FileUploadTest" />
-      <option name="METHOD_NAME" value="fileUploadTest" />
+      <option name="PACKAGE_NAME" value="HomeWork" />
+      <option name="MAIN_CLASS_NAME" value="HomeWork.FloatingMenuTest" />
+      <option name="METHOD_NAME" value="floatingJSTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -155,35 +161,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FrameTests.frameTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="HomeWork.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.FrameTests" />
-      <option name="METHOD_NAME" value="frameTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="HomeWork" />
+      <option name="MAIN_CLASS_NAME" value="HomeWork.LoginTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JSTests.jsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginTest.loginTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Lesson6" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="tests.*" />
+          <option name="PATTERN" value="HomeWork.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.JSTests" />
-      <option name="METHOD_NAME" value="jsTest" />
+      <option name="PACKAGE_NAME" value="HomeWork" />
+      <option name="MAIN_CLASS_NAME" value="HomeWork.LoginTest" />
+      <option name="METHOD_NAME" value="loginTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -213,19 +218,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.Unnamed" />
-      <item itemvalue="TestNG.ActionTests.actionTest2" />
-      <item itemvalue="TestNG.FileUploadTest.fileUploadTest" />
-      <item itemvalue="TestNG.FileUploadTest" />
-      <item itemvalue="TestNG.FrameTests.frameTest" />
-      <item itemvalue="TestNG.JSTests.jsTest" />
+      <item itemvalue="TestNG.DynamicLoadingTest.waitsTest" />
+      <item itemvalue="TestNG.FloatingMenuTest.floatingJSTest" />
+      <item itemvalue="TestNG.FloatingMenuTest" />
+      <item itemvalue="TestNG.LoginTest" />
+      <item itemvalue="TestNG.LoginTest.loginTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.JSTests.jsTest" />
-        <item itemvalue="TestNG.FrameTests.frameTest" />
-        <item itemvalue="TestNG.FileUploadTest" />
-        <item itemvalue="TestNG.FileUploadTest.fileUploadTest" />
-        <item itemvalue="TestNG.ActionTests.actionTest2" />
+        <item itemvalue="TestNG.LoginTest" />
+        <item itemvalue="TestNG.LoginTest.loginTest" />
+        <item itemvalue="TestNG.FloatingMenuTest" />
+        <item itemvalue="TestNG.FloatingMenuTest.floatingJSTest" />
+        <item itemvalue="TestNG.DynamicLoadingTest.waitsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -574,7 +579,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642095221643</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="AdvancedActions classwork">
+      <created>1642182653381</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1642182653381</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

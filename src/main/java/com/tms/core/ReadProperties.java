@@ -20,6 +20,10 @@ public class ReadProperties {
     public static boolean getHeadless() { return properties.getProperty("headless").equalsIgnoreCase("true");}
     public static String getUsername() { return properties.getProperty("username");}
     public static String getPassword() { return properties.getProperty("password");}
+    public static String getUsername1() { return properties.getProperty("username1");}
+    public static String getPassword1() { return properties.getProperty("password1");}
     public static int getTimeOut() { return Integer.parseInt(properties.getProperty("timeout"));
+
+
     }
 }
