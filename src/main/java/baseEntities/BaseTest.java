@@ -21,7 +21,7 @@ public class BaseTest {
     protected Waits waits;
 
     @BeforeClass
-    public void openPage() {
+    public void setUp() {
         browsersService = new BrowsersService();
         driver = browsersService.getDriver();
         waits = new Waits(driver);
