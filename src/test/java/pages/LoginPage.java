@@ -25,9 +25,7 @@ public class LoginPage extends BasePage {
     }
 
     @Override
-    protected boolean isPageOpened() {
-        return waits.waitForVisibility(PAGE_OPENED_IDENTIFIER).isDisplayed();
-    }
+    protected boolean isPageOpened() {return waits.waitForVisibility(PAGE_OPENED_IDENTIFIER).isDisplayed();}
 
     public WebElement getEmailField() {return driver.findElement(emailSelector);}
 
