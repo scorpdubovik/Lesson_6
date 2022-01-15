@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
+import utils.Listener;
 import utils.Waits;
 
 import java.util.Locale;
@@ -20,7 +21,7 @@ public class BaseTest {
     protected Waits waits;
 
     @BeforeClass
-    public void openPage() {
+    public void setUp() {
         browsersService = new BrowsersService();
         driver = browsersService.getDriver();
         waits = new Waits(driver);
@@ -30,6 +31,5 @@ public class BaseTest {
 
     @AfterClass
     public void closePage() {
-        driver.quit();
-    }
+        driver.quit();}
 }

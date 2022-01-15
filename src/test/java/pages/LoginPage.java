@@ -25,35 +25,26 @@ public class LoginPage extends BasePage {
     }
 
     @Override
-    protected boolean isPageOpened() {
-        return waits.waitForVisibility(PAGE_OPENED_IDENTIFIER).isDisplayed();
-    }
+    protected boolean isPageOpened() {return waits.waitForVisibility(PAGE_OPENED_IDENTIFIER).isDisplayed();}
 
-    public WebElement getEmailField() {
-        return driver.findElement(emailSelector);
-    }
+    public WebElement getEmailField() {return driver.findElement(emailSelector);}
 
-    public WebElement getPasswordField() {
-        return driver.findElement(passwordSelector);
-    }
+    public WebElement getPasswordField() {return driver.findElement(passwordSelector);}
 
-    public WebElement getLoginButton() {
-        return driver.findElement(loginSelector);
-    }
+    public WebElement getLoginButton() {return driver.findElement(loginSelector);}
 
-    private void populateFields(String email, String psw) {
+    private void populateFields(String email, String psw){
         getEmailField().sendKeys(ReadProperties.getUsername());
         getPasswordField().sendKeys(ReadProperties.getPassword());
     }
 
-    public DashboardPage successLogin(String email, String psw) {
-        populateFields(email, psw);
-        getLoginButton().click();
-        return new DashboardPage(driver);
+    public DashboardPage successLogin(String email, String psw){
+       populateFields(email,psw);
+       getLoginButton().click();
+       return new DashboardPage(driver);
     }
-
-    public LoginPage incorrectLogin(String email, String psw) {
-        populateFields(email, psw);
+    public LoginPage incorrectLogin(String email, String psw){
+        populateFields(email,psw);
         getLoginButton().click();
         return new LoginPage(driver);
     }
