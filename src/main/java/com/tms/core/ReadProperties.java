@@ -32,7 +32,7 @@ public class ReadProperties {
         return properties.getProperty("password");
     }
 
-    public static boolean getHeadless() {
+    public static boolean isHeadless() {
         return properties.getProperty("headless").equalsIgnoreCase("true");
     }
 

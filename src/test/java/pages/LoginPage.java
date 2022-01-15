@@ -44,10 +44,10 @@ public class LoginPage extends BasePage {
     }
 
     // Реализация базовых методов
-
-    public void login(String username, String password){
-        getEmailField().sendKeys(ReadProperties.getUsername());
-        getPasswordField().sendKeys(ReadProperties.getPassword());
-        getLoginButton().click();
-    }
+//
+//    public void login(String username, String password){
+//        getEmailField().sendKeys(ReadProperties.getUsername());
+//        getPasswordField().sendKeys(ReadProperties.getPassword());
+//        getLoginButton().click();
+//    }
 }

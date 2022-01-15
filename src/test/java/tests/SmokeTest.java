@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.DashboardPage;
 import pages.LoginPage;
+import utils.Retry;
 
 public class SmokeTest extends BaseTest {
 
@@ -18,22 +19,23 @@ public class SmokeTest extends BaseTest {
         loginPage.getLoginButton().click();
 
         DashboardPage dashboardPage = new DashboardPage(driver);
-        waits.waitForVisibility(dashboardPage.getAddProjectButton());
+        driver.get("https://qa1504.testrail.io/index.php?/admin/overview");
 
-        Assert.assertTrue(dashboardPage.isPageOpened());
+        dashboardPage = new DashboardPage(driver, true);
+        Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
+        @Test(retryAnalyzer = Retry.class)
+        public void flakyLoginTest () {
+            LoginPage loginPage = new LoginPage(driver);
 
-    @Test(retryAnalyzer = Retry.class)
-    public void flakyLoginTest() {
-        LoginPage loginPage = new LoginPage(driver);
+            loginPage.getEmailField().sendKeys(ReadProperties.getUsername());
+            loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
+            loginPage.getLoginButton().click();
 
-        loginPage.getEmailField().sendKeys(ReadProperties.getUsername());
-        loginPage.getPasswordField().sendKeys(ReadProperties.getPassword());
-        loginPage.getLoginButton().click();
+            DashboardPage dashboardPage = new DashboardPage(driver);
+            driver.get("https://qa1504.testrail.io/index.php?/admin/overview");
 
-        DashboardPage dashboardPage = new DashboardPage(driver);
-        waits.waitForVisibility(dashboardPage.getAddProjectButton());
-
-        Assert.assertTrue(dashboardPage.isPageOpened());
+            dashboardPage = new DashboardPage(driver, true);
+            Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
+        }
     }
-}
