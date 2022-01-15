@@ -16,6 +16,11 @@ public class DashboardPage extends BasePage {
         super(driver);
     }
 
+    public DashboardPage(WebDriver driver, boolean openPageByUrl) {
+        super(driver, openPageByUrl);
+    }
+
+
     @Override
     protected void openPage() {
         driver.get(BASE_URL + ENDPOINT);
