@@ -39,4 +39,30 @@ public class ReadProperties {
     public static int getTimeOut() {
         return Integer.parseInt(properties.getProperty("timeout"));
     }
+
+    public static String getProjectName1() {
+        return properties.getProperty("projectName1");
+    }
+    public static String getProjectName2() {
+        return properties.getProperty("projectName2");
+    }
+    public static String getProjectName3() {
+        return properties.getProperty("projectName3");
+    }
+    public static String getAnnouncement() {
+        return properties.getProperty("announcement");
+    }
+    public static String getRadioButton1() {
+        return properties.getProperty("radioButton1");
+    }
+    public static String getRadioButton2() {
+        return properties.getProperty("radioButton2");
+    }
+    public static String getRadioButton3() {
+        return properties.getProperty("radioButton3");
+    }
+
+
+
+
 }
