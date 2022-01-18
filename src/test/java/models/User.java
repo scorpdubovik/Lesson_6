@@ -11,4 +11,5 @@ import lombok.*;
 public class User {
     private String email;
     private String password;
+    private int UUID;
 }
