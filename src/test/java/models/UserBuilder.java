@@ -1,7 +1,5 @@
 package models;
 
-package models;
-
 public class UserBuilder {
     private String email;
     private String password;

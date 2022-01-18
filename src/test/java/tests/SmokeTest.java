@@ -56,8 +56,8 @@ public class SmokeTest extends BaseTest {
     @Test
     public void loginTestWithBuilder() {
         UserBuilder user = new UserBuilder.Builder()
-                .withEmail((ReadProperties.getUsername())
-                        .withPassword((ReadProperties.getPassword())
+                .withEmail(ReadProperties.getUsername())
+                        .withPassword(ReadProperties.getPassword())
                         .build();
 
         LoginPage loginPage = new LoginPage(driver);
