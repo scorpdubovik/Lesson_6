@@ -21,7 +21,7 @@ public class MilestoneTests extends BaseTest {
         loginPage.login(user);
 
         projectSteps.addProject(project);
-        milestoneSteps.createMilestone(project,milestone);
+        milestoneSteps.createMilestone(project, milestone);
 
 
     }
