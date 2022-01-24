@@ -1,4 +1,4 @@
-package tests;
+package tests.gui;
 
 import baseEntities.BaseTest;
 import com.tms.core.ReadProperties;
@@ -17,9 +17,10 @@ public class SmokeTest extends BaseTest {
 
     @Test
     public void loginTest() {
-        User user = new User()
-                user.setEmail(ReadProperties.getUsername());
-                user.setPassword(ReadProperties.getPassword());
+        User user = User.builder()
+                .email(ReadProperties.getUsername())
+                .password(ReadProperties.getPassword())
+                .build();
 
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login(user);
@@ -43,13 +44,12 @@ public class SmokeTest extends BaseTest {
         Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
 
-    private void setupProjects(){
-        addProject = new Project();
-        addProject.setName(Randomization.getRandomString(8));
-        addProject.setTypeOfProject(Randomization.getRandomType());
-
-        updateProject = new Project();
-        updateProject.setName(Randomization.getRandomString(8));
-        updateProject.setTypeOfProject(Randomization.getRandomType());
+//    private void setupProjects(){
+//        addProject = new Project();
+//        addProject.setName(Randomization.getRandomString(8));
+//        addProject.setTypeOfProject(Randomization.getRandomType());
+//
+//        updateProject = new Project();
+//        updateProject.setName(Randomization.getRandomString(8));
+//        updateProject.setTypeOfProject(Randomization.getRandomType());
     }
-}

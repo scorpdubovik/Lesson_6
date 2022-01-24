@@ -1,14 +1,16 @@
 package models;
 
-import enums.ProjectType;
+import lombok.Builder;
+import lombok.Data;
 
 public class Project {
     private String name;
     private String announcement;
     private boolean isShowAnnouncement;
-    private ProjectType typeOfProject;
+    private int typeOfProject;
     private boolean isCompleted;
     private User user;
+
 
     public Project() {
     }
