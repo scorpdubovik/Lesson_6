@@ -1,10 +1,13 @@
-package baseEntities;
+package baseEntity;
 
-import com.tms.core.ReadProperties;
+
+import core.ReadProperties;
+import org.jsoup.Connection;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import utils.Waits;
+
+import java.util.NoSuchElementException;
 
 public abstract class BasePage {
     protected static final int WAIT_FOR_PAGE_LOADED_IN_SECONDS = 30;

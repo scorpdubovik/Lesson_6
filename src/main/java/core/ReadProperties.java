@@ -1,4 +1,4 @@
-package com.tms.core;
+package core;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -32,7 +32,7 @@ public class ReadProperties {
         return properties.getProperty("password");
     }
 
-    public static boolean getHeadless() {
+    public static boolean isHeadless() {
         return properties.getProperty("headless").equalsIgnoreCase("true");
     }
 

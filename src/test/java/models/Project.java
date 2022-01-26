@@ -1,5 +1,6 @@
 package models;
 
+import enums.ProjectType;
 import lombok.Builder;
 import lombok.Data;
 
@@ -10,7 +11,6 @@ public class Project {
     private int typeOfProject;
     private boolean isCompleted;
     private User user;
-
 
     public Project() {
     }

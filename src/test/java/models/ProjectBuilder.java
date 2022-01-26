@@ -1,6 +1,7 @@
 package models;
 
 import com.google.gson.annotations.SerializedName;
+import enums.ProjectType;
 import lombok.Builder;
 import lombok.Data;
 
@@ -15,5 +16,4 @@ public class ProjectBuilder {
     @SerializedName(value = "is_completed")
     private boolean isCompleted;
     private User user;
-
 }

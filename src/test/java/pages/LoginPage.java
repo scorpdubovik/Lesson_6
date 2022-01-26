@@ -1,6 +1,6 @@
 package pages;
 
-import baseEntities.BasePage;
+import baseEntity.BasePage;
 import models.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

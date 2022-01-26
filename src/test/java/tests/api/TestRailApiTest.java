@@ -1,7 +1,8 @@
 package tests.api;
 
-import baseEntities.BaseApiTest;
-import com.tms.core.ReadProperties;
+import baseEntity.BaseApiTest;
+import com.sun.xml.internal.ws.policy.EffectiveAlternativeSelector;
+import core.ReadProperties;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.http.Method;
@@ -17,7 +18,7 @@ import static io.restassured.RestAssured.given;
 public class TestRailApiTest extends BaseApiTest {
 
     @Test
-    public void getAllUsers(){
+    public void getAllUsers() {
         // Setup RestAssured
         RestAssured.baseURI = ReadProperties.getUrl();
 
@@ -32,9 +33,10 @@ public class TestRailApiTest extends BaseApiTest {
         // Setup Response Object
         Response response = httpRequest.request(Method.GET, endpoint);
 
-        //Get Response Status
+        // Get Response Status
         int statusCode = response.getStatusCode();
         System.out.println("Status Code: " + statusCode);
+        Assert.assertEquals(statusCode, 200);
         Assert.assertEquals(statusCode, HttpStatus.SC_OK);
 
         // Get Response Body
@@ -43,7 +45,7 @@ public class TestRailApiTest extends BaseApiTest {
     }
 
     @Test
-    public void getAllUsers1(){
+    public void getAllUsers1() {
         // Setup endpoint
         String endpoint = "/index.php?/api/v2/get_users";
 

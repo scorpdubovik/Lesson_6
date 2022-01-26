@@ -1,7 +1,6 @@
-package baseEntities;
+package baseEntity;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import utils.Waits;
 
 public class BaseStep {
@@ -9,7 +8,7 @@ public class BaseStep {
     protected Waits waits;
 
     public BaseStep(WebDriver driver) {
-this.driver =driver;
-waits = new Waits(driver);
+        this.driver = driver;
+        this.waits = new Waits(driver);
     }
 }

@@ -1,7 +1,7 @@
 package tests.gui;
 
-import baseEntities.BaseTest;
-import com.tms.core.ReadProperties;
+import baseEntity.BaseTest;
+import core.ReadProperties;
 import models.Project;
 import models.User;
 import org.testng.Assert;
@@ -29,7 +29,7 @@ public class SmokeTest extends BaseTest {
         Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
 
-    @Test (retryAnalyzer = Retry.class)
+    @Test(retryAnalyzer = Retry.class)
     public void flakyLoginTest() {
         LoginPage loginPage = new LoginPage(driver);
 
@@ -44,12 +44,14 @@ public class SmokeTest extends BaseTest {
         Assert.assertTrue(dashboardPage.getAddProjectButton().isDisplayed());
     }
 
-//    private void setupProjects(){
-//        addProject = new Project();
-//        addProject.setName(Randomization.getRandomString(8));
-//        addProject.setTypeOfProject(Randomization.getRandomType());
-//
-//        updateProject = new Project();
-//        updateProject.setName(Randomization.getRandomString(8));
-//        updateProject.setTypeOfProject(Randomization.getRandomType());
+
+    private void setupProjects() {
+        addProject = new Project();
+        addProject.setName(Randomization.getRandomString(8));
+        addProject.setTypeOfProject(Randomization.getRandomType());
+
+        updateProject = new Project();
+        updateProject.setName(Randomization.getRandomString(8));
+        updateProject.setTypeOfProject(Randomization.getRandomType());
     }
+}

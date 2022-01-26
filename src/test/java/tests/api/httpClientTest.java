@@ -16,17 +16,15 @@ public class httpClientTest {
     public void simpleApiTest() throws IOException {
         String restURL = "https://reqres.in";
 
-
-//      Create object and pass the url
+        // Create Object and pass the url
         HttpUriRequest request = new HttpGet(restURL);
 
-//      send the request
+        // send the request
         HttpResponse httpResponse = HttpClientBuilder
                 .create()
                 .build()
                 .execute(request);
 
         Assert.assertEquals(httpResponse.getStatusLine().getStatusCode(), HttpStatus.SC_OK);
-
     }
 }

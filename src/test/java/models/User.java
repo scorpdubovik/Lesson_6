@@ -2,12 +2,9 @@ package models;
 
 import lombok.*;
 
-//@Getter
-//@Setter
-//@ToStringd
-//@EqualsAndHashCode
 @Data
 @Builder
+@ToString(exclude = "UUID")
 public class User {
     private String email;
     private String password;

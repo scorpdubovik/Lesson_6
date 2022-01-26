@@ -1,10 +1,12 @@
 package utils;
 
+import enums.ProjectType;
+
 import java.util.Random;
 
 public class Randomization {
 
-    public static String getRandomString(int length){
+    public static String getRandomString(int length) {
         int leftLimit = 97; // letter 'a'
         int rightLimit = 122; // letter 'z'
 
@@ -19,13 +21,12 @@ public class Randomization {
         return buffer.toString();
     }
 
-    public static int getRandomInt(int rightBound){
+    public static int gerRandomInt(int rightBound) {
         Random rnd = new Random();
-
-                return rnd.nextInt(rightBound);
+        return rnd.nextInt(rightBound);
     }
-//    public static int getRandomType() {
-//        Random rnd = new Random();
-//        return ProjectType.values()[rnd.nextInt(ProjectType.values().length)];
-//    }
+
+    public static int getRandomType() {
+        return gerRandomInt(2) + 1;
+    }
 }
