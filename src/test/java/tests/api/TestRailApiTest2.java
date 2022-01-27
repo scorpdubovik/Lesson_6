@@ -127,8 +127,10 @@ public class TestRailApiTest2 extends BaseApiTest {
         Type listType = new TypeToken<ArrayList<User>>() {}.getType();
         List<User> actualUsersList = gson.fromJson(response.getBody().asString(), listType);
 
-        User[] actualUser = gson.fromJson(response.getBody().asString(), User[].class);
 
-        Assert.assertEquals(actualUsersList.get(0), expectedUser);
+//        User[] actualUser = gson.fromJson(response.getBody().asString(), User[].class);  // 1й вариант
+//        Assert.assertEquals(actualUser[0], expectedUser);   // 1й вариант
+
+        Assert.assertEquals(actualUsersList.get(0), expectedUser); // 2й вариант
     }
 }
