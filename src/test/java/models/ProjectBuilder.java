@@ -10,6 +10,7 @@ import lombok.Data;
 public class ProjectBuilder {
     private String name;
     private String announcement;
+    @SerializedName(value = "show_announcement")
     private boolean isShowAnnouncement;
     @SerializedName(value = "suite_mode")
     private int typeOfProject;

@@ -141,7 +141,7 @@ public class TestRailApiTest1 extends BaseApiTest {
                 projectUpd.getName());
     }
 
-    @Test(dependsOnMethods = "updateProject")
+    @Test(dependsOnMethods = "addProject4")
     public void deleteProject() {
         String endpoint = "index.php?/api/v2/delete_project/{project_id}";
 
