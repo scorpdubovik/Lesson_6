@@ -26,6 +26,7 @@ public class AllureTest {
     public void testIssue() {
         Assert.assertTrue(true);
     }
+
     @Test
     @TmsLink("TMS-123")
     @TmsLink("TMS-456")
@@ -35,7 +36,7 @@ public class AllureTest {
 
     @Test
     @Link("https://example.org")
-    @Link(name = "allureLink", type = "myLink", url = "https://onliner.by")
+    @Link(name = "allureLink", type = "mylink", url = "https://onliner.by")
     public void testLink() {
         Assert.assertTrue(true);
     }

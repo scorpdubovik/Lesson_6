@@ -1,8 +1,8 @@
 package models;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
 
 @Data
 @Builder
@@ -12,7 +12,7 @@ public class User {
     private String password;
     @SerializedName(value = "is_active")
     private boolean isActive;
-    @SerializedName("role_id")
+    @SerializedName(value = "role_id")
     private int roleId;
     private String role;
 }
