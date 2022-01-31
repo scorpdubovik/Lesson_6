@@ -1,7 +1,7 @@
 package pages;
 
 import baseEntity.BasePage;
-import enums.ProjectType;
+import core.enums.ProjectType;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 

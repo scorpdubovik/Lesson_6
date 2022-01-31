@@ -1,7 +1,7 @@
 package tests.api;
 
 import baseEntity.BaseApiTest;
-import enums.ProjectType;
+import core.enums.ProjectType;
 import io.restassured.mapper.ObjectMapperType;
 import io.restassured.response.Response;
 import models.ProjectBuilder;

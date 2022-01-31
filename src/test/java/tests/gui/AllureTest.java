@@ -6,6 +6,7 @@ import io.qameta.allure.Link;
 import io.qameta.allure.TmsLink;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import steps.ProjectSteps;
 
 public class AllureTest {
 
@@ -39,4 +40,5 @@ public class AllureTest {
     public void testLink() {
         Assert.assertTrue(true);
     }
+
 }
