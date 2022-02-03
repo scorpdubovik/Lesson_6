@@ -6,10 +6,11 @@
         </Console>
     </Appenders>
     <Loggers>
-
-        Logger name="logger" level="trace">
+<Logger name="logger" level="trace">
+    <AppenderRef ref="Console"/>
+</Logger>
+        <Root level="trace">
             <AppenderRef ref="Console"/>
-        </Logger>
         </Root>
-    </Loggers>
+        </Loggers>
 </Configuration>
