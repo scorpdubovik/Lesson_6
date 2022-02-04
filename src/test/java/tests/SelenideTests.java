@@ -30,7 +30,7 @@ public class SelenideTests {
 
         // or for fine-tuning:
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
-                .screenshots(false)
+                .screenshots(true)
                 .savePageSource(true)
         );
 
