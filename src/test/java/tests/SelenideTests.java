@@ -7,7 +7,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.openqa.selenium.By;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
-import tests.pages.LoginPage;
+import pages.LoginPage;
 
 import java.io.File;
 import java.io.FileNotFoundException;

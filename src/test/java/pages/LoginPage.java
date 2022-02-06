@@ -1,4 +1,4 @@
-package tests.pages;
+package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
@@ -21,4 +21,5 @@ public class LoginPage {
     public SelenideElement getLoginButton() {
         return $(login_button_selector);
     }
+
 }
