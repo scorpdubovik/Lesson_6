@@ -19,6 +19,11 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
+    public LoginPage(WebDriver driver, boolean openByURL) {
+        super(driver, openByURL);
+    }
+
+
     @Override
     protected void openPage() {
         driver.get(BASE_URL + ENDPOINT);
