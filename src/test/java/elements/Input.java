@@ -10,13 +10,15 @@ public class Input {
     public Input(WebDriver driver, By by) {
         this.uiElement = new UIElement(driver, by);
     }
+
     public Input(WebDriver driver, WebElement webElement) {
         this.uiElement = new UIElement(driver, webElement);
     }
-    public void sendKeys(CharSequence... charSequence) {
-        uiElement.sendKeys(charSequence);
+
+    public void sendKeys(CharSequence... charSequences) {
+        uiElement.sendKeys(charSequences);
     }
-    public boolean isDisplayed(){
-        return uiElement.isDisplayed();
-    }
+
+    public boolean isDisplayed() { return uiElement.isDisplayed(); }
+
 }

@@ -23,7 +23,6 @@ public class LoginPage extends BasePage {
         super(driver, openByURL);
     }
 
-
     @Override
     protected void openPage() {
         driver.get(BASE_URL + ENDPOINT);
@@ -57,6 +56,7 @@ public class LoginPage extends BasePage {
                 .email(username)
                 .password(password)
                 .build();
+
         login(user);
     }
 }

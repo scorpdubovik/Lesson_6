@@ -16,7 +16,7 @@ import pages.DashboardPage;
 import pages.LoginPage;
 
 public class FirstStepDefs extends BaseCucumberTest {
-LoginPage loginPage;
+    LoginPage loginPage;
 
     @Given("открыт браузер")
     public void browserIsStarted() {
@@ -37,7 +37,8 @@ LoginPage loginPage;
     public void usernameFieldIsDisplayed() {
         Assert.assertTrue(loginPage.getEmailField().isDisplayed());
     }
-@Given("user logged in")
+
+    @Given("user logged in")
     public void userLoggedIn() {
         User user = User.builder()
                 .email(ReadProperties.getUsername())
@@ -48,7 +49,7 @@ LoginPage loginPage;
 
     @When("user {string} with password {string} logged in")
     public void userWithPasswordLoggedIn(String username, String password) {
-        loginPage.login(username,password);
+        loginPage.login(username, password);
     }
 
     @Then("add project button is displayed")
@@ -61,7 +62,6 @@ LoginPage loginPage;
     public void usernameIs(String username) {
         DashboardPage dashboardPage = new DashboardPage(driver, false);
         Assert.assertEquals(dashboardPage.getVisibleUsername(), username);
-
     }
 
     @And("project id is {int}")

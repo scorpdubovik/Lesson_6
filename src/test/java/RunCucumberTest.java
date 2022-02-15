@@ -4,10 +4,10 @@ import org.testng.annotations.DataProvider;
 
 @CucumberOptions(
         features = {"src/test/resources/features"},
-        plugin = {":target/cucumber.json", "html:target/suite/cucumber-pretty"},
+        plugin = {"json:target/cucumber.json", "html:target/site/cucumber-pretty"},
         glue = "steps"
 )
-public class RunCucumberTest  extends AbstractTestNGCucumberTests {
+public class RunCucumberTest extends AbstractTestNGCucumberTests {
 
     @Override
     @DataProvider
