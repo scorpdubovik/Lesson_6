@@ -24,7 +24,7 @@ jobs:
       # run tests!
       - run:
           name: Running tests
-          command: mvn clean install
+          command: mvn clean test
 
       # Generate Allure Report
       - run:
