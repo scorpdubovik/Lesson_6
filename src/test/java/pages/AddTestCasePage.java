@@ -16,6 +16,7 @@ public class AddTestCasePage {
     protected By mission_selector = By.id("custom_mission_display");
     protected By goals_selector = By.id("custom_goals_display");
     protected By saveTestCaseButtonSelector = By.id("accept");
+    protected String successFieldSelector = ".message.message-success";
 
 
     public SelenideElement getTitleField() {
@@ -40,7 +41,6 @@ public class AddTestCasePage {
         return $(references_selector);
     }
 
-
     public SelenideElement getAutomationTypeField() {
         return $(automationType_selector);
     }
@@ -54,5 +54,7 @@ public class AddTestCasePage {
     }
 
     public SelenideElement getSaveTestCaseButton() {return $(saveTestCaseButtonSelector);}
+
+    public SelenideElement getSuccessField() {return $(successFieldSelector);}
 
 }

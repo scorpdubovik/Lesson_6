@@ -12,7 +12,7 @@ public class MilestonePage {
     protected By startDate_selector = By.id("start_on");
     protected By endDate_selector = By.id("due_on");
     protected By addMilestoneButtonSelector = By.id("accept");
-
+    protected String successFieldSelector = ".message.message-success";
 
     public SelenideElement getNameField() {
         return $(name_selector);
@@ -34,4 +34,5 @@ public class MilestonePage {
 
     public SelenideElement getAddMilestoneButton() {return $(addMilestoneButtonSelector);}
 
+    public SelenideElement getSuccessField() {return $(successFieldSelector);}
 }

@@ -5,6 +5,8 @@ import enums.ProjectType;
 import models.Project;
 import models.TestCase;
 import org.testng.annotations.Test;
+import pages.AddProjectPage;
+import pages.AddTestCasePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -14,6 +16,8 @@ public class HW_TestCaseTests extends BaseTest {
     Project project;
     public static String addProjectName1;
     public static String addTestCaseName;
+    private AddProjectPage addProjectPage;
+    private AddTestCasePage addTestCasePage;
 
     @Test
     public void addProjectTest() {
@@ -25,8 +29,8 @@ public class HW_TestCaseTests extends BaseTest {
                 .build();
         addProjectName1 = project.getName();
 
-        projectSteps.addProject(project);
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully added the new project."));
+        addProjectPage = projectSteps.addProject(project);
+        addProjectPage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully added the new project."));
     }
 
     @Test(dependsOnMethods = "addProjectTest")
@@ -38,8 +42,8 @@ public class HW_TestCaseTests extends BaseTest {
                 .build();
         addTestCaseName = testCase.getTitle();
 
-        testCaseSteps.addTestCase(project, testCase);
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully added the new test case."));
+        addTestCasePage = testCaseSteps.addTestCase(project, testCase);
+        addTestCasePage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully added the new test case."));
     }
 
     @Test(dependsOnMethods = {"addProjectTest", "addTestCase"})
@@ -50,13 +54,13 @@ public class HW_TestCaseTests extends BaseTest {
                 .references("RF-12")
                 .build();
 
-        testCaseSteps.updateTestCase(project, updateTestCase);
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully updated the test case."));
+        addTestCasePage = testCaseSteps.updateTestCase(project, updateTestCase);
+        addTestCasePage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully updated the test case."));
     }
 
-    @Test(dependsOnMethods = {"addProjectTest", "addTestCase", "updateTestCase"})
+    @Test(dependsOnMethods = {"addProjectTest", "addTestCase"})
     public void deleteTestCase() {
-        testCaseSteps.deleteTestCase();
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully flagged the test case as deleted."));
+        addTestCasePage = testCaseSteps.deleteTestCase();
+        addTestCasePage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully flagged the test case as deleted."));
     }
 }

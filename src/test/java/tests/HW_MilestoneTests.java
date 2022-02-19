@@ -5,28 +5,31 @@ import enums.ProjectType;
 import models.Milestone;
 import models.Project;
 import org.testng.annotations.Test;
+import pages.AddProjectPage;
+import pages.MilestonePage;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
 
 public class HW_MilestoneTests extends BaseTest {
     Project project;
     public static String addProjectName;
     public static String addMilestoneName;
+    private MilestonePage milestonePage;
+    private AddProjectPage addProjectPage;
 
     @Test
     public void addProjectTest() {
         Project project = Project.builder()
-                .name("Project101")
+                .name("Project1011")
                 .announcement("My project")
                 .isShowAnnouncement(true)
                 .typeOfProject(ProjectType.SINGLE_SUITE_MODE)
                 .build();
         addProjectName = project.getName();
 
-        projectSteps.addProject(project);
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully added the new project."));
+        addProjectPage = projectSteps.addProject(project);
+        addProjectPage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully added the new project."));
     }
 
     @Test(dependsOnMethods = "addProjectTest")
@@ -40,8 +43,8 @@ public class HW_MilestoneTests extends BaseTest {
                 .build();
         addMilestoneName = milestone.getName();
 
-        milestoneSteps.createMilestone(project, milestone);
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully added the new milestone."));
+        milestonePage = milestoneSteps.addMilestone(project, milestone);
+        milestonePage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully added the new milestone."));
     }
 
     @Test(dependsOnMethods = {"addProjectTest", "addMilestoneTest"})
@@ -54,13 +57,13 @@ public class HW_MilestoneTests extends BaseTest {
                 .endDate("2/28/2022")
                 .build();
 
-        milestoneSteps.updateMilestone(project, milestoneUpdated);
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully updated the milestone."));
+        milestonePage = milestoneSteps.updateMilestone(project, milestoneUpdated);
+        milestonePage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully updated the milestone."));
     }
 
     @Test(dependsOnMethods = {"addProjectTest", "addMilestoneTest", "updateMilestoneTest"})
     public void deleteMilestoneTest() {
-        milestoneSteps.deleteMilestone();
-        $(".message.message-success").shouldBe(visible).shouldHave(text("Successfully deleted the milestone (s)."));
+        milestonePage = milestoneSteps.deleteMilestone();
+        milestonePage.getSuccessField().shouldBe(visible).shouldHave(text("Successfully deleted the milestone (s)."));
     }
 }

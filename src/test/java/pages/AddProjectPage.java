@@ -15,6 +15,8 @@ public class AddProjectPage {
     private static String typeRadioButtonSelector = "//*[@name = 'suite_mode' and @value='replace']";
     protected By showAnnouncementTick = By.id("show_announcement");
     protected By createProject_Button = By.id("accept");
+    protected String successFieldSelector = ".message.message-success";
+
 
     public SelenideElement getNameField() {return $(name_Selector);}
 
@@ -25,6 +27,8 @@ public class AddProjectPage {
     public SelenideElement getCreateProjectButton() {
         return $(createProject_Button);
     }
+
+    public SelenideElement getSuccessField() {return $(successFieldSelector);}
 
     public void setType(int type) {$(By.xpath(typeRadioButtonSelector.replace("replace", String.valueOf(type))));}
 

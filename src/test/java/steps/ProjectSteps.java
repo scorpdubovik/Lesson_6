@@ -5,11 +5,10 @@ import pages.AddProjectPage;
 import pages.DashboardPage;
 
 public class ProjectSteps {
-    private AddProjectPage addProjectPage;
+    private AddProjectPage addProjectPage = new AddProjectPage();
+    private DashboardPage dashboardPage = new DashboardPage();
 
-    public void addProject(Project project) {
-        AddProjectPage addProjectPage = new AddProjectPage();
-        DashboardPage dashboardPage = new DashboardPage();
+    public AddProjectPage addProject(Project project) {
         dashboardPage.getAddProjectButton().click();
 
         addProjectPage.getNameField().val(project.getName());
@@ -18,6 +17,7 @@ public class ProjectSteps {
         addProjectPage.setType(project.getTypeOfProject());
         addProjectPage.getCreateProjectButton().click();
 
+        return addProjectPage;
     }
 
     public void updateProject(Project currentProject, Project newProject) {
